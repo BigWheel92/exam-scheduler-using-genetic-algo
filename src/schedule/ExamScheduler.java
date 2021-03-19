@@ -11,14 +11,15 @@ public class ExamScheduler {
 
 	GeneticAlgorithm ga;
 	private GThread thread;
+	
 	public class GThread extends Thread
 	{
-
 		@Override
-			public void run() {
-			System.out.println("Exam Scheduler Thread started.");
-			runScheduler();
-			System.out.println("Exam Scheduler Thread stopped.");
+		public void run() {
+		  
+		   System.out.println("Exam Scheduler Thread started.");
+		   runScheduler();
+		   System.out.println("Exam Scheduler Thread stopped.");
 		}
 
 
@@ -83,7 +84,6 @@ public class ExamScheduler {
 
 	public void runScheduler()
 	{
-
 		ga = null;
 
 		if (this.examType.equals("final"))
