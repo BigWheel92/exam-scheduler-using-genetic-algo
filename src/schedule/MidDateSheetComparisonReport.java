@@ -181,9 +181,6 @@ public class MidDateSheetComparisonReport {
 
 				CourseWiseSummary newClash = newReport.get(j);
 
-				System.out.println(oldClash.date + " " + oldClash.courses.toString());
-				System.out.println(newClash.date + " " + newClash.courses.toString());
-				System.out.println("");
 				if (oldClash.date.equals(newClash.date) && oldClash.courses.containsAll(newClash.courses) && newClash.courses.containsAll(oldClash.courses))
 				{
 					oldClash.color = YELLOW;
