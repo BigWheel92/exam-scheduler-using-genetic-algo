@@ -11,7 +11,7 @@ public class GeneticAlgorithmForFinalExams extends GeneticAlgorithm {
 	}
 
 	@Override
-		public void evaluateChromosome(Chromosome c)
+	public void evaluateChromosome(Chromosome c)
 	{
 		Day[] days = c.getDayWiseSchedule();
 		int unfitness = 0;
