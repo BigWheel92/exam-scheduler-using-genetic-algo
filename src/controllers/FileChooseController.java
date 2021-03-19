@@ -1,9 +1,6 @@
 package controllers;
-
 import java.io.File;
 import java.io.IOException;
-
-
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
