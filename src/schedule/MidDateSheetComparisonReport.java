@@ -92,8 +92,6 @@ public class MidDateSheetComparisonReport {
 	}
 
 
-
-
 	private class 	StudentWithMoreThan2ExamsPerDay implements Comparable //more than 2 exams on the same day.
 	{
 		public String rollNumber;
@@ -107,7 +105,7 @@ public class MidDateSheetComparisonReport {
 
 
 		@Override
-			public int compareTo(Object arg0) {
+		public int compareTo(Object arg0) {
 
 			StudentWithMoreThan2ExamsPerDay that = (StudentWithMoreThan2ExamsPerDay)arg0;
 
@@ -142,7 +140,7 @@ public class MidDateSheetComparisonReport {
 		public int color = -1;
 
 		@Override
-			public int compareTo(Object arg0) {
+		public int compareTo(Object arg0) {
 
 			StudentExamClash that = (StudentExamClash)arg0;
 
@@ -236,9 +234,6 @@ public class MidDateSheetComparisonReport {
 	//both 3 day and 4 day comparisons will make use of this function
 	private void generateMoreThan2ExamsInOneDayComparisonReport(ArrayList<StudentWithMoreThan2ExamsPerDay> oldReport, ArrayList<StudentWithMoreThan2ExamsPerDay> newReport, ArrayList<StudentWithMoreThan2ExamsPerDay> comparisonList)
 	{
-
-
-
 		for (int i = 0; i < oldReport.size(); i++)
 		{
 			StudentWithMoreThan2ExamsPerDay oldClash = oldReport.get(i);
@@ -318,7 +313,7 @@ public class MidDateSheetComparisonReport {
 			this.cr_StudentExamClashes.add(oldClash);
 		}
 
-		System.out.println(cr_StudentExamClashes.size());
+		//System.out.println(cr_StudentExamClashes.size());
 		for (int i = 0; i < newClashReport.size(); i++)
 		{
 			StudentExamClash newClash = newClashReport.get(i);
@@ -413,9 +408,6 @@ public class MidDateSheetComparisonReport {
 		{
 			return MidExamReportSheetNames.courseWiseSummary + " sheet does not exist in new mid term report.";
 		}
-
-
-
 
 		//reading student Exam clash sheet from both reports and generating comparison report.
 		ArrayList<StudentExamClash> oldStudentExamClashes = new ArrayList<StudentExamClash>();
@@ -540,9 +532,9 @@ public class MidDateSheetComparisonReport {
 			}
 		}
 	}
+	
 	public void printStudentsWithExamClash(XSSFWorkbook workbook)
 	{
-
 
 		Collections.sort(this.cr_StudentExamClashes);
 		//Student Wise Exam Clash (more than 1 exam in the same slot)
@@ -873,8 +865,6 @@ public class MidDateSheetComparisonReport {
 		}
 
 	}
-
-
 
 	public String readSummaryReport(Sheet sheet, ArrayList<CourseWiseSummary> list)
 	{
