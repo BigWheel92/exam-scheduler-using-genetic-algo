@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="520.0" prefWidth="757.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StatsMessageBoxController">
+   <children>
+      <VBox fx:id="mutationRateLabel" alignment="TOP_CENTER" prefHeight="517.0" prefWidth="783.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="messageLabel" alignment="TOP_LEFT" contentDisplay="TOP" prefHeight="43.0" prefWidth="406.0" text="Please wait while the final exam datesheet and the report are being created. Press the stop button to stop." textAlignment="CENTER" wrapText="true" />
+            <Label fx:id="statsLabel" prefHeight="150.0" prefWidth="340.0" text="dasdsadasdassadaxzczxcxzczxczxcxzcxzczcxzczxzcxzczxcadqwewqeqweqe21312s" textAlignment="JUSTIFY" textFill="RED" wrapText="true" />
+            <HBox alignment="CENTER">
+               <children>
+                  <Label fx:id="populationSizeLabel" minHeight="15.0" minWidth="92.0" prefHeight="25.0" prefWidth="130.0" text="Population Size:" wrapText="true">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="populationSizeTextField" prefHeight="26.0" prefWidth="146.0" promptText="&gt;2" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="51.0" prefWidth="409.0">
+               <children>
+                  <Label fx:id="tournamentSizeLabel" minHeight="15.0" minWidth="98.0" prefHeight="25.0" prefWidth="144.0" text="Tournament Size:" wrapText="true" />
+                  <TextField fx:id="tournamentSizeTextField" prefHeight="26.0" prefWidth="150.0" promptText="&gt;0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="51.0" prefWidth="409.0">
+               <children>
+                  <Label fx:id="childrenPerGenLabel" minHeight="18.0" minWidth="94.0" prefHeight="18.0" prefWidth="159.0" text="Children Per Gen:" wrapText="true" />
+                  <TextField fx:id="childrenPerGenTextField" prefHeight="26.0" prefWidth="142.0" promptText="&gt;0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="51.0" prefWidth="409.0">
+               <children>
+                  <Label fx:id="mutationRateLabel" minHeight="18.0" minWidth="93.0" prefHeight="18.0" prefWidth="143.0" text="Mutation Rate:" wrapText="true" />
+                  <TextField fx:id="mutationRateTextField" prefHeight="26.0" prefWidth="142.0" promptText="0-1" />
+               </children>
+            </HBox>
+            <Button fx:id="updateParametersButton" mnemonicParsing="false" onMouseClicked="#onUpdateParametersButtonClicked" prefHeight="34.0" prefWidth="150.0" text="Update Parameters" wrapText="true" />
+            <Button fx:id="stopButton" mnemonicParsing="false" onMouseClicked="#onStopButtonClicked" prefHeight="31.0" prefWidth="151.0" text="Stop" wrapText="true">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
