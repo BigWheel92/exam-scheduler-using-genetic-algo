@@ -36,7 +36,6 @@ public class GeneticAlgorithmForFinalExams extends GeneticAlgorithm {
 			}
 		}
 
-
 		//finding number of students who have more than 1 exam on same day
 		int countOfCoursesToSchedule = this.problemData.getCoursesToBeScheduled().size();
 
