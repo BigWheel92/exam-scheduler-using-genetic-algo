@@ -73,9 +73,6 @@ public class MidDateSheetComparisonReport {
 				return 1;
 			}
 
-
-
-
 			if (this.courses.get(0).compareTo(that.courses.get(0)) == 0)
 			{
 				if (this.courses.get(1).compareTo(that.courses.get(1)) == 0)
