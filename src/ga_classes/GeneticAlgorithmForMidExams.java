@@ -10,7 +10,7 @@ public class GeneticAlgorithmForMidExams extends GeneticAlgorithm {
 	}
 
 	@Override
-		public void evaluateChromosome(Chromosome c)
+	public void evaluateChromosome(Chromosome c)
 	{
 		Day[] days = c.getDayWiseSchedule();
 		int unfitness = 0;
@@ -35,9 +35,7 @@ public class GeneticAlgorithmForMidExams extends GeneticAlgorithm {
 			}
 		}
 
-
 		//finding number of students who have more than 2 exam on same day
-
 		for (String studentRollNo : this.problemData.getAllStudents().keySet())
 		{
 			for (int i = 0; i < this.problemData.getTotalDays(); i++)
