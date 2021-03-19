@@ -288,10 +288,11 @@ public class FileChooseController {
 	public static final Callback<TableColumn<Course, String>, TableCell<Course, String>> WRAPPING_CELL_FACTORY = new Callback<TableColumn<Course, String>, TableCell<Course, String>>() {
 
 		@Override
-			public TableCell<Course, String> call(TableColumn<Course, String> param) {
+		public TableCell<Course, String> call(TableColumn<Course, String> param) {
 			TableCell<Course, String> tableCell = new TableCell<Course, String>() {
+
 				@Override
-					protected void updateItem(String item, boolean empty) {
+				protected void updateItem(String item, boolean empty) {
 					if (item == getItem())
 						return;
 
@@ -314,6 +315,7 @@ public class FileChooseController {
 					}
 				}
 			};
+			
 			return tableCell;
 		}
 	};
