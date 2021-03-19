@@ -120,7 +120,6 @@ public class MidDateSheetComparisonReport {
 			else return this.rollNumber.compareTo(that.rollNumber);
 		}
 
-
 	}
 
 
@@ -333,8 +332,6 @@ public class MidDateSheetComparisonReport {
 			}
 
 		}
-
-
 
 	}
 
