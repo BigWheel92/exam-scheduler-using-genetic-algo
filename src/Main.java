@@ -14,15 +14,15 @@ public class Main extends Application {
 	}
 
 	@Override
-		public void start(Stage mainWindow) throws Exception {
-
-		Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("views/MainWindow.fxml"));
-		mainWindow.setTitle("FAST-NU Exam Scheduler Scheduler");
-		mainWindow.setScene(new Scene(root));
-		mainWindow.initStyle(StageStyle.DECORATED);
-		mainWindow.setMaxHeight(850);
-		mainWindow.setMaxWidth(800);
-		mainWindow.show();
-
+	public void start(Stage mainWindow) throws Exception {
+		
+	Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("views/MainWindow.fxml"));
+	mainWindow.setTitle("FAST-NU Exam Scheduler Scheduler");
+	mainWindow.setScene(new Scene(root));
+	mainWindow.initStyle(StageStyle.DECORATED);
+	mainWindow.setMaxHeight(850);
+	mainWindow.setMaxWidth(800);
+	mainWindow.show();
+		
 	}
 }
