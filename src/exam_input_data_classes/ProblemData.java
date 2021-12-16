@@ -164,9 +164,9 @@ public class ProblemData {
 			workbook = WorkbookFactory.create(new File(inputFilePath));
 			DataFormatter dataFormatter = new DataFormatter();
 
-			if (workbook.getSheet("Setting") == null)
+			if (workbook.getSheet("Settings") == null)
 			{
-				return "Setting sheet not found.";
+				return "Settings sheet not found.";
 
 			}
 
@@ -176,18 +176,18 @@ public class ProblemData {
 
 			}
 
-			this.examStartDate = this.readSettingValue(workbook.getSheet("Setting"), "ExamStartDate");
+			this.examStartDate = this.readSettingValue(workbook.getSheet("Settings"), "ExamStartDate");
 
 			if (this.examStartDate == null || this.examStartDate.equals(""))
 			{
-				return "ExamStartDate not found in setting sheet.";
+				return "ExamStartDate not found in settings sheet.";
 
 			}
 
-			String capacity = this.readSettingValue(workbook.getSheet("Setting"), "Capacity");
+			String capacity = this.readSettingValue(workbook.getSheet("Settings"), "Capacity");
 			if (capacity == null || capacity.equals(""))
 			{
-				return "Capacity not found in setting sheet.";
+				return "Capacity not found in settings sheet.";
 			}
 
 			try {
@@ -199,17 +199,17 @@ public class ProblemData {
 				return "The value in capacity is in incorrect format.";
 			}
 
-			this.semesterName = this.readSettingValue(workbook.getSheet("Setting"), "SemesterName");
+			this.semesterName = this.readSettingValue(workbook.getSheet("Settings"), "SemesterName");
 			if (this.semesterName == null || this.semesterName.equals(""))
 			{
-				return "SemesterName not found in setting sheet.";
+				return "SemesterName not found in settings sheet.";
 			}
 
-			String days = this.readSettingValue(workbook.getSheet("Setting"), "Days");
+			String days = this.readSettingValue(workbook.getSheet("Settings"), "Days");
 
 			if (days == null || days.equals(""))
 			{
-				return "Days not found in setting sheet.";
+				return "Days not found in settings sheet.";
 
 			}
 
@@ -223,11 +223,11 @@ public class ProblemData {
 
 			}
 
-			String slots = this.readSettingValue(workbook.getSheet("Setting"), "Slots");
+			String slots = this.readSettingValue(workbook.getSheet("Settings"), "Slots");
 
 			if (slots == null || slots.equals(""))
 			{
-				return "slots not found in setting sheet.";
+				return "slots not found in settings sheet.";
 
 			}
 
@@ -241,11 +241,11 @@ public class ProblemData {
 
 			}
 
-			String saturdayOff = this.readSettingValue(workbook.getSheet("Setting"), "SaturdayOff");
+			String saturdayOff = this.readSettingValue(workbook.getSheet("Settings"), "SaturdayOff");
 
 			if (saturdayOff == null || saturdayOff.equals(""))
 			{
-				return "saturdayOff not found in setting sheet.";
+				return "saturdayOff not found in settings sheet.";
 			}
 
 			if (saturdayOff.toLowerCase().equals("yes"))
@@ -263,7 +263,7 @@ public class ProblemData {
 			if (this.examType.equals("final"))
 			{
 
-				if (readHolidaysForFinalExams(workbook.getSheet("Setting"), "Holiday") == false)
+				if (readHolidaysForFinalExams(workbook.getSheet("Settings"), "Holiday") == false)
 					return "An error occurred in reading holidays.";
 			}
 
@@ -455,9 +455,9 @@ public class ProblemData {
 
 
 
-	protected boolean readHolidaysForFinalExams(Sheet settingSheet, String settingName)
+	protected boolean readHolidaysForFinalExams(Sheet settingsSheet, String settingName)
 	{
-		Iterator<Row> settingsIterator = settingSheet.rowIterator();
+		Iterator<Row> settingsIterator = settingsSheet.rowIterator();
 
 		try
 		{
@@ -503,9 +503,9 @@ public class ProblemData {
 
 	}
 
-	private String readSettingValue(Sheet settingSheet, String settingName)
+	private String readSettingValue(Sheet settingsSheet, String settingName)
 	{
-		Iterator<Row> settingIterator = settingSheet.rowIterator();
+		Iterator<Row> settingIterator = settingsSheet.rowIterator();
 
 		try
 		{
