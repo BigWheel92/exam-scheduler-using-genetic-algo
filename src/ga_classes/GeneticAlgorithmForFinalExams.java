@@ -57,7 +57,7 @@ public class GeneticAlgorithmForFinalExams extends GeneticAlgorithm {
 							if (cs1.getSlot() == cs2.getSlot())
 								unfitness += 4; //if the slot is the same too.
 
-							else unfitness += 2; //if the slot is not the same.
+							else unfitness += 3; //if the slot is not the same.
 
 						}
 					}
@@ -72,7 +72,7 @@ public class GeneticAlgorithmForFinalExams extends GeneticAlgorithm {
 					{
 						if (problemData.getAllCourses().get(cs2.getCourseId()).getStudentRollNumbers().contains(rollNumber))
 						{
-							fitness++;
+							unfitness+=2;
 						}
 					}
 					//HashSet<String> intersection = new HashSet<String>(problemData.getAllCourses().get(cs1.getCourseId()).getStudentRollNumbers()); // use the copy constructor
